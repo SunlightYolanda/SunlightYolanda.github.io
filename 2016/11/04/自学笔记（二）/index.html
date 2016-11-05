@@ -1,0 +1,561 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="又过了十天，总结一下这段时间的自学内容。和之前定的计划有出入，上次总结完以后有点急躁了，连着3天不知道该干嘛。很着急、烦躁，想一口吃成一个胖子。毕竟算下来正式辞职两个月了，不知道什么时候有信心去找工作，压力很大。好在第四天开始继续填坑。
+jQuery学习之前一段时间一直在写静态页面，所以打算先看看JavaScript的内容。结果是没看下去，了解了下基础语法，发现要学会不是几天可以搞定的，是我想多了">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自学笔记（二）">
+<meta property="og:url" content="http://yoursite.com/2016/11/04/自学笔记（二）/index.html">
+<meta property="og:site_name" content="Sunlight的博客">
+<meta property="og:description" content="又过了十天，总结一下这段时间的自学内容。和之前定的计划有出入，上次总结完以后有点急躁了，连着3天不知道该干嘛。很着急、烦躁，想一口吃成一个胖子。毕竟算下来正式辞职两个月了，不知道什么时候有信心去找工作，压力很大。好在第四天开始继续填坑。
+jQuery学习之前一段时间一直在写静态页面，所以打算先看看JavaScript的内容。结果是没看下去，了解了下基础语法，发现要学会不是几天可以搞定的，是我想多了">
+<meta property="og:updated_time" content="2016-11-05T01:31:15.957Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="自学笔记（二）">
+<meta name="twitter:description" content="又过了十天，总结一下这段时间的自学内容。和之前定的计划有出入，上次总结完以后有点急躁了，连着3天不知道该干嘛。很着急、烦躁，想一口吃成一个胖子。毕竟算下来正式辞职两个月了，不知道什么时候有信心去找工作，压力很大。好在第四天开始继续填坑。
+jQuery学习之前一段时间一直在写静态页面，所以打算先看看JavaScript的内容。结果是没看下去，了解了下基础语法，发现要学会不是几天可以搞定的，是我想多了">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/11/04/自学笔记（二）/"/>
+
+
+  <title> 自学笔记（二） | Sunlight的博客 </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Sunlight的博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">我要变成猿！</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                自学笔记（二）
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-04T20:49:49+08:00" content="2016-11-04">
+              2016-11-04
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>又过了十天，总结一下这段时间的自学内容。<br>和之前定的计划有出入，上次总结完以后有点急躁了，连着3天不知道该干嘛。很着急、烦躁，想一口吃成一个胖子。毕竟算下来正式辞职两个月了，不知道什么时候有信心去找工作，压力很大。好在第四天开始继续填坑。</p>
+<h3 id="jQuery学习"><a href="#jQuery学习" class="headerlink" title="jQuery学习"></a>jQuery学习</h3><p>之前一段时间一直在写静态页面，所以打算先看看JavaScript的内容。结果是没看下去，了解了下基础语法，发现要学会不是几天可以搞定的，是我想多了，所以转战jQuery。  <a id="more"></a><br>jQuery之前看过基础内容，这次是看的网易云课堂李炎恢老师的视频。学习内容有基础语法、选择器、过滤选择器、基础DOM和CSS操作、节点操作、动画效果、Ajax、jQuery UI 、各种插件的使用等内容。最后是根据所学内容做一个仿知乎的小项目，实现简单的功能。最后的练习中，重点是对jQuery UI的运用，html部分比较简单，搭建好基本框架即可。主要有以下几个部分：</p>
+<h4 id="header部分"><a href="#header部分" class="headerlink" title="header部分"></a>header部分</h4><p>header部分主要涉及搜索框及按钮、提问按钮、注册、登录、退出等内容。用jQuery UI设置按钮的样式，<br>注册、登录、用户、退出等用css设置样式。重点是对其进行事件绑定以及表单验证。<br><strong>基本的逻辑是：</strong>提问、注册、登录这几个部分都需要弹出对话框，用jQuery UI来设置。他们相互之间又有联系，设定只有登录状态才能提问，如果没有登录转到登录对话框，如果没有帐号转到注册对话框进行注册，注册完之后自动登录。注册、登录这两部分用到了表单验证，用表单插件和验证插件完成。提问部分用到了uEditor编辑器插件。整个过程需要在服务器端验证，也要学一点数据库和php的基本操作。</p>
+<h4 id="main主体部分"><a href="#main主体部分" class="headerlink" title="main主体部分"></a>main主体部分</h4><p>显示问题和评论。问题和评论都提交到了服务器端，显示也需要从数据库加载，用到了AJAX和JSON。<br><strong>基本的逻辑是：</strong>发布的问题和评论用ajax提交到远程，然后再从远程获取数据在页面显示。所以页面显示的内容不是写在html文件中，而是动态加载。涉及到数据类型的转换.<br><strong>小结：</strong>练习中比较难理解的是主体内容的添加和显示，做起来比较费劲。尤其是AJAX和JSON，用起来不熟练，少一个符号就得找半天。需要有良好的编写代码的习惯，这样就算有问题，结合错误提示也可以比较快地解决。    </p>
+<p>明天开始开始填上次计划的坑，不能把html和css落下。！！！加油！！！<br><strong><a href="https://github.com/SunlightYolanda/jQuery" target="_blank" rel="external">jQuery练手小项目</a></strong></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/23/自学笔记（一）/" rel="next" title="自学笔记（一）">
+                <i class="fa fa-chevron-left"></i> 自学笔记（一）
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/1.jpg"
+               alt="Sunlight" />
+          <p class="site-author-name" itemprop="name">Sunlight</p>
+          <p class="site-description motion-element" itemprop="description">年少无为，不知老之将至</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/SunlightYolanda" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery学习"><span class="nav-number">1.</span> <span class="nav-text">jQuery学习</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#header部分"><span class="nav-number">1.1.</span> <span class="nav-text">header部分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#main主体部分"><span class="nav-number">1.2.</span> <span class="nav-text">main主体部分</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sunlight</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
