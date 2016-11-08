@@ -84,19 +84,16 @@
 
 
 
-<meta name="description" content="又过了十天，总结一下这段时间的自学内容。和之前定的计划有出入，上次总结完以后有点急躁了，连着3天不知道该干嘛。很着急、烦躁，想一口吃成一个胖子。毕竟算下来正式辞职两个月了，不知道什么时候有信心去找工作，压力很大。好在第四天开始继续填坑。
-jQuery学习之前一段时间一直在写静态页面，所以打算先看看JavaScript的内容。结果是没看下去，了解了下基础语法，发现要学会不是几天可以搞定的，是我想多了">
+<meta name="description" content="第一个填的坑是轮播图，主要是用jQuery完成三个简单的轮播图：手动点击、自动轮播、鼠标悬浮停止。基本结构：最外面一个框架，里面用无序列表来放置要展示的图片；让li水平排列，并且li宽度与框架宽度相等。超出部分隐藏，也就是只展示第一个图片，其余部分隐藏；再用一个div来放置数字，默认展示第一个图片，设置与图片对应的数字背景变色。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="自学笔记（二）">
-<meta property="og:url" content="http://yoursite.com/2016/11/04/自学笔记（二）/index.html">
+<meta property="og:title" content="轮播图及其他页面练习">
+<meta property="og:url" content="http://yoursite.com/2016/11/08/轮播图及其他页面练习/index.html">
 <meta property="og:site_name" content="Sunlight的博客">
-<meta property="og:description" content="又过了十天，总结一下这段时间的自学内容。和之前定的计划有出入，上次总结完以后有点急躁了，连着3天不知道该干嘛。很着急、烦躁，想一口吃成一个胖子。毕竟算下来正式辞职两个月了，不知道什么时候有信心去找工作，压力很大。好在第四天开始继续填坑。
-jQuery学习之前一段时间一直在写静态页面，所以打算先看看JavaScript的内容。结果是没看下去，了解了下基础语法，发现要学会不是几天可以搞定的，是我想多了">
-<meta property="og:updated_time" content="2016-11-05T01:31:15.957Z">
+<meta property="og:description" content="第一个填的坑是轮播图，主要是用jQuery完成三个简单的轮播图：手动点击、自动轮播、鼠标悬浮停止。基本结构：最外面一个框架，里面用无序列表来放置要展示的图片；让li水平排列，并且li宽度与框架宽度相等。超出部分隐藏，也就是只展示第一个图片，其余部分隐藏；再用一个div来放置数字，默认展示第一个图片，设置与图片对应的数字背景变色。">
+<meta property="og:updated_time" content="2016-11-08T13:47:10.823Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="自学笔记（二）">
-<meta name="twitter:description" content="又过了十天，总结一下这段时间的自学内容。和之前定的计划有出入，上次总结完以后有点急躁了，连着3天不知道该干嘛。很着急、烦躁，想一口吃成一个胖子。毕竟算下来正式辞职两个月了，不知道什么时候有信心去找工作，压力很大。好在第四天开始继续填坑。
-jQuery学习之前一段时间一直在写静态页面，所以打算先看看JavaScript的内容。结果是没看下去，了解了下基础语法，发现要学会不是几天可以搞定的，是我想多了">
+<meta name="twitter:title" content="轮播图及其他页面练习">
+<meta name="twitter:description" content="第一个填的坑是轮播图，主要是用jQuery完成三个简单的轮播图：手动点击、自动轮播、鼠标悬浮停止。基本结构：最外面一个框架，里面用无序列表来放置要展示的图片；让li水平排列，并且li宽度与框架宽度相等。超出部分隐藏，也就是只展示第一个图片，其余部分隐藏；再用一个div来放置数字，默认展示第一个图片，设置与图片对应的数字背景变色。">
 
 
 
@@ -117,10 +114,10 @@ jQuery学习之前一段时间一直在写静态页面，所以打算先看看Ja
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/11/04/自学笔记（二）/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/11/08/轮播图及其他页面练习/"/>
 
 
-  <title> 自学笔记（二） | Sunlight的博客 </title>
+  <title> 轮播图及其他页面练习 | Sunlight的博客 </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -230,7 +227,7 @@ jQuery学习之前一段时间一直在写静态页面，所以打算先看看Ja
             
             
               
-                自学笔记（二）
+                轮播图及其他页面练习
               
             
           </h1>
@@ -242,8 +239,8 @@ jQuery学习之前一段时间一直在写静态页面，所以打算先看看Ja
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-04T20:49:49+08:00" content="2016-11-04">
-              2016-11-04
+            <time itemprop="dateCreated" datetime="2016-11-08T19:43:13+08:00" content="2016-11-08">
+              2016-11-08
             </time>
           </span>
 
@@ -270,11 +267,23 @@ jQuery学习之前一段时间一直在写静态页面，所以打算先看看Ja
       
 
       
-        <p>又过了十天，总结一下这段时间的自学内容。<br>和之前定的计划有出入，上次总结完以后有点急躁了，连着3天不知道该干嘛。很着急、烦躁，想一口吃成一个胖子。毕竟算下来正式辞职两个月了，不知道什么时候有信心去找工作，压力很大。好在第四天开始继续填坑。</p>
-<h3 id="jQuery学习"><a href="#jQuery学习" class="headerlink" title="jQuery学习"></a>jQuery学习</h3><p>之前一段时间一直在写静态页面，所以打算先看看JavaScript的内容。结果是没看下去，了解了下基础语法，发现要学会不是几天可以搞定的，是我想多了，所以转战jQuery。  <a id="more"></a><br>jQuery之前看过基础内容，这次是看的网易云课堂李炎恢老师的视频。学习内容有基础语法、选择器、过滤选择器、基础DOM和CSS操作、节点操作、动画效果、Ajax、jQuery UI 、各种插件的使用等内容。最后是根据所学内容做一个仿知乎的小项目，实现简单的功能。最后的练习中，重点是对jQuery UI的运用，html部分比较简单，搭建好基本框架即可。主要有以下几个部分：</p>
-<h4 id="header部分"><a href="#header部分" class="headerlink" title="header部分"></a>header部分</h4><p>header部分主要涉及搜索框及按钮、提问按钮、注册、登录、退出等内容。用jQuery UI设置按钮的样式，<br>注册、登录、用户、退出等用css设置样式。重点是对其进行事件绑定以及表单验证。<br><strong>基本的逻辑是：</strong>提问、注册、登录这几个部分都需要弹出对话框，用jQuery UI来设置。他们相互之间又有联系，设定只有登录状态才能提问，如果没有登录转到登录对话框，如果没有帐号转到注册对话框进行注册，注册完之后自动登录。注册、登录这两部分用到了表单验证，用表单插件和验证插件完成。提问部分用到了uEditor编辑器插件。整个过程需要在服务器端验证，也要学一点数据库和php的基本操作。</p>
-<h4 id="main主体部分"><a href="#main主体部分" class="headerlink" title="main主体部分"></a>main主体部分</h4><p>显示问题和评论。问题和评论都提交到了服务器端，显示也需要从数据库加载，用到了AJAX和JSON。<br><strong>基本的逻辑是：</strong>发布的问题和评论用ajax提交到远程，然后再从远程获取数据在页面显示。所以页面显示的内容不是写在html文件中，而是动态加载。涉及到数据类型的转换.<br><strong>小结：</strong>练习中比较难理解的是主体内容的添加和显示，做起来比较费劲。尤其是AJAX和JSON，用起来不熟练，少一个符号就得找半天。需要有良好的编写代码的习惯，这样就算有问题，结合错误提示也可以比较快地解决。    </p>
-<p>明天开始开始填上次计划的坑，不能把html和css落下。！！！加油！！！<br><strong><a href="https://github.com/SunlightYolanda/jQuery" target="_blank" rel="external">jQuery练手小项目</a></strong></p>
+        <p>第一个填的坑是轮播图，主要是用jQuery完成三个简单的轮播图：<strong>手动点击</strong>、<strong>自动轮播</strong>、<strong>鼠标悬浮停止</strong>。<br><strong>基本结构：</strong>最外面一个框架，里面用无序列表来放置要展示的图片；让li水平排列，并且li宽度与框架宽度相等。超出部分隐藏，也就是只展示第一个图片，其余部分隐藏；再用一个div来放置数字，默认展示第一个图片，设置与图片对应的数字背景变色。<br><a id="more"></a><br><strong>轮播效果：</strong>将列表相对定位，为其添加动画效果，根据数字索引号，计算移动距离，将其向左移动。实现轮播图效果。</p>
+<h4 id="手动点击轮播图"><a href="#手动点击轮播图" class="headerlink" title="手动点击轮播图"></a>手动点击轮播图</h4><p><strong>绑定事件：</strong>为数字绑定click事件，点击数字时，为该数字添加变色样式，同时让其他的同类元素移除变色样式。ul根据数字索引向左移动，实现轮播。    </p>
+<p><strong>效果展示：</strong><a href="https://sunlightyolanda.github.io/Task/%E8%BD%AE%E6%92%AD%E5%9B%BE/%E6%89%8B%E5%8A%A8%E7%82%B9%E5%87%BB-%E4%BD%8D%E7%BD%AE/demo.html" target="_blank" rel="external">手动轮播图</a></p>
+<h4 id="自动轮播图"><a href="#自动轮播图" class="headerlink" title="自动轮播图"></a>自动轮播图</h4><p><strong>绑定事件：</strong>自动轮播图在手动轮播图的基础上修改而来。在保留手动点击效果的同时添加自动轮播。需要添加模拟点击事件:trigger()。而要保证不停轮播，需要用到setInterval() ，设定每2秒点击一次。<br>但是这样还有问题，要轮播的图片是一定的，而自动轮播每模拟点击一次，图片索引就要加1，到了最后一个的时候再加1，没有与之对应的图片。所以需要对索引号进行判断。当索引号大于数字-1的时候，图片索引号归零。**同时为了效果更好，设置ul马上回到初始位置，否则图片和数字会从最后一个倒回第一个。而设置ul归零，可以直接从第一个从新开始。    </p>
+<p><strong>效果展示：</strong><a href="https://sunlightyolanda.github.io/Task/%E8%BD%AE%E6%92%AD%E5%9B%BE/%E8%87%AA%E5%8A%A8%E8%BD%AE%E6%92%AD/demo.html" target="_blank" rel="external">自动轮播图</a></p>
+<h4 id="鼠标悬浮停止"><a href="#鼠标悬浮停止" class="headerlink" title="鼠标悬浮停止"></a>鼠标悬浮停止</h4><p><strong>绑定事件：</strong>鼠标悬浮停止只需要在上一个的基础上添加一个hover()即可，同时为了减少重复代码，可以将自动轮播代码写一个函数封装，只需要在hover()里调用就行。这里有一个坑，让我一不小心就掉进去了！！！<br>上面说将自动轮播写成一个函数，自动轮播需要调用，用的是autoPlay()，此时是加括号的！而hover()里面也要用到该函数，写的却是autoPlay!!!看了下面这个文章才搞明白。</p>
+<p><strong>效果展示：</strong><a href="https://sunlightyolanda.github.io/Task/%E8%BD%AE%E6%92%AD%E5%9B%BE/%E6%82%AC%E6%B5%AE%E5%81%9C%E6%AD%A2/demo.html" target="_blank" rel="external">悬浮停止</a></p>
+<p><strong>js函数名加不加括号的区别：</strong><br><a href="http://www.dzwebs.net/4876.html" target="_blank" rel="external">看这里</a></p>
+<h4 id="其他练习页面"><a href="#其他练习页面" class="headerlink" title="其他练习页面"></a>其他练习页面</h4><ul>
+<li><a href="https://sunlightyolanda.github.io/Task/zxyTask/task1/" target="_blank" rel="external">九宫格</a></li>
+<li><a href="https://sunlightyolanda.github.io/Task/zxyTask/task3/" target="_blank" rel="external">移动端页面一</a></li>
+<li><a href="https://sunlightyolanda.github.io/Task/zxyTask/task4/" target="_blank" rel="external">移动端页面二</a></li>
+<li><a href="https://sunlightyolanda.github.io/Task/zxyTask/task7/task7-1" target="_blank" rel="external">PC端页面一</a></li>
+<li><a href="https://sunlightyolanda.github.io/Task/zxyTask/task7/task7-2" target="_blank" rel="external">PC端页面二</a></li>
+<li><a href="https://sunlightyolanda.github.io/Task/zxyTask/task8/" target="_blank" rel="external">PC端页面三</a></li>
+<li><a href="https://sunlightyolanda.github.io/Task/zxyTask/task9/" target="_blank" rel="external">PC端页面四</a></li>
+</ul>
 
       
     </div>
@@ -300,17 +309,13 @@ jQuery学习之前一段时间一直在写静态页面，所以打算先看看Ja
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/10/23/自学笔记（一）/" rel="next" title="自学笔记（一）">
-                <i class="fa fa-chevron-left"></i> 自学笔记（一）
+              <a href="/2016/11/04/自学笔记（二）/" rel="next" title="自学笔记（二）">
+                <i class="fa fa-chevron-left"></i> 自学笔记（二）
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/11/08/轮播图及其他页面练习/" rel="prev" title="轮播图及其他页面练习">
-                轮播图及其他页面练习 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -421,7 +426,7 @@ jQuery学习之前一段时间一直在写静态页面，所以打算先看看Ja
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery学习"><span class="nav-number">1.</span> <span class="nav-text">jQuery学习</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#header部分"><span class="nav-number">1.1.</span> <span class="nav-text">header部分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#main主体部分"><span class="nav-number">1.2.</span> <span class="nav-text">main主体部分</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#手动点击轮播图"><span class="nav-number">1.</span> <span class="nav-text">手动点击轮播图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自动轮播图"><span class="nav-number">2.</span> <span class="nav-text">自动轮播图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#鼠标悬浮停止"><span class="nav-number">3.</span> <span class="nav-text">鼠标悬浮停止</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他练习页面"><span class="nav-number">4.</span> <span class="nav-text">其他练习页面</span></a></li></ol></div>
             
           </div>
         </section>
