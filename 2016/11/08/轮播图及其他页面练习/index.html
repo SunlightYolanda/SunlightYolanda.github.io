@@ -90,7 +90,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/11/08/轮播图及其他页面练习/index.html">
 <meta property="og:site_name" content="Sunlight的博客">
 <meta property="og:description" content="第一个填的坑是轮播图，主要是用jQuery完成三个简单的轮播图：手动点击、自动轮播、鼠标悬浮停止。基本结构：最外面一个框架，里面用无序列表来放置要展示的图片；让li水平排列，并且li宽度与框架宽度相等。超出部分隐藏，也就是只展示第一个图片，其余部分隐藏；再用一个div来放置数字，默认展示第一个图片，设置与图片对应的数字背景变色。">
-<meta property="og:updated_time" content="2016-11-08T13:47:10.823Z">
+<meta property="og:updated_time" content="2016-11-16T01:25:42.406Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="轮播图及其他页面练习">
 <meta name="twitter:description" content="第一个填的坑是轮播图，主要是用jQuery完成三个简单的轮播图：手动点击、自动轮播、鼠标悬浮停止。基本结构：最外面一个框架，里面用无序列表来放置要展示的图片；让li水平排列，并且li宽度与框架宽度相等。超出部分隐藏，也就是只展示第一个图片，其余部分隐藏；再用一个div来放置数字，默认展示第一个图片，设置与图片对应的数字背景变色。">
@@ -269,20 +269,20 @@
       
         <p>第一个填的坑是轮播图，主要是用jQuery完成三个简单的轮播图：<strong>手动点击</strong>、<strong>自动轮播</strong>、<strong>鼠标悬浮停止</strong>。<br><strong>基本结构：</strong>最外面一个框架，里面用无序列表来放置要展示的图片；让li水平排列，并且li宽度与框架宽度相等。超出部分隐藏，也就是只展示第一个图片，其余部分隐藏；再用一个div来放置数字，默认展示第一个图片，设置与图片对应的数字背景变色。<br><a id="more"></a><br><strong>轮播效果：</strong>将列表相对定位，为其添加动画效果，根据数字索引号，计算移动距离，将其向左移动。实现轮播图效果。</p>
 <h4 id="手动点击轮播图"><a href="#手动点击轮播图" class="headerlink" title="手动点击轮播图"></a>手动点击轮播图</h4><p><strong>绑定事件：</strong>为数字绑定click事件，点击数字时，为该数字添加变色样式，同时让其他的同类元素移除变色样式。ul根据数字索引向左移动，实现轮播。    </p>
-<p><strong>效果展示：</strong><a href="https://sunlightyolanda.github.io/Task/%E8%BD%AE%E6%92%AD%E5%9B%BE/%E6%89%8B%E5%8A%A8%E7%82%B9%E5%87%BB-%E4%BD%8D%E7%BD%AE/demo.html" target="_blank" rel="external">手动轮播图</a></p>
+<p><strong>效果展示：</strong><a href="https://sunlightyolanda.github.io/Task/%E8%BD%AE%E6%92%AD%E5%9B%BE/%E6%89%8B%E5%8A%A8%E7%82%B9%E5%87%BB/demo.html" target="_blank" rel="external">手动轮播图</a></p>
 <h4 id="自动轮播图"><a href="#自动轮播图" class="headerlink" title="自动轮播图"></a>自动轮播图</h4><p><strong>绑定事件：</strong>自动轮播图在手动轮播图的基础上修改而来。在保留手动点击效果的同时添加自动轮播。需要添加模拟点击事件:trigger()。而要保证不停轮播，需要用到setInterval() ，设定每2秒点击一次。<br>但是这样还有问题，要轮播的图片是一定的，而自动轮播每模拟点击一次，图片索引就要加1，到了最后一个的时候再加1，没有与之对应的图片。所以需要对索引号进行判断。当索引号大于数字-1的时候，图片索引号归零。**同时为了效果更好，设置ul马上回到初始位置，否则图片和数字会从最后一个倒回第一个。而设置ul归零，可以直接从第一个从新开始。    </p>
 <p><strong>效果展示：</strong><a href="https://sunlightyolanda.github.io/Task/%E8%BD%AE%E6%92%AD%E5%9B%BE/%E8%87%AA%E5%8A%A8%E8%BD%AE%E6%92%AD/demo.html" target="_blank" rel="external">自动轮播图</a></p>
 <h4 id="鼠标悬浮停止"><a href="#鼠标悬浮停止" class="headerlink" title="鼠标悬浮停止"></a>鼠标悬浮停止</h4><p><strong>绑定事件：</strong>鼠标悬浮停止只需要在上一个的基础上添加一个hover()即可，同时为了减少重复代码，可以将自动轮播代码写一个函数封装，只需要在hover()里调用就行。这里有一个坑，让我一不小心就掉进去了！！！<br>上面说将自动轮播写成一个函数，自动轮播需要调用，用的是autoPlay()，此时是加括号的！而hover()里面也要用到该函数，写的却是autoPlay!!!看了下面这个文章才搞明白。</p>
 <p><strong>效果展示：</strong><a href="https://sunlightyolanda.github.io/Task/%E8%BD%AE%E6%92%AD%E5%9B%BE/%E6%82%AC%E6%B5%AE%E5%81%9C%E6%AD%A2/demo.html" target="_blank" rel="external">悬浮停止</a></p>
 <p><strong>js函数名加不加括号的区别：</strong><br><a href="http://www.dzwebs.net/4876.html" target="_blank" rel="external">看这里</a></p>
 <h4 id="其他练习页面"><a href="#其他练习页面" class="headerlink" title="其他练习页面"></a>其他练习页面</h4><ul>
-<li><a href="https://sunlightyolanda.github.io/Task/zxyTask/task1/" target="_blank" rel="external">九宫格</a></li>
-<li><a href="https://sunlightyolanda.github.io/Task/zxyTask/task3/" target="_blank" rel="external">移动端页面一</a></li>
-<li><a href="https://sunlightyolanda.github.io/Task/zxyTask/task4/" target="_blank" rel="external">移动端页面二</a></li>
-<li><a href="https://sunlightyolanda.github.io/Task/zxyTask/task7/task7-1" target="_blank" rel="external">PC端页面一</a></li>
-<li><a href="https://sunlightyolanda.github.io/Task/zxyTask/task7/task7-2" target="_blank" rel="external">PC端页面二</a></li>
-<li><a href="https://sunlightyolanda.github.io/Task/zxyTask/task8/" target="_blank" rel="external">PC端页面三</a></li>
-<li><a href="https://sunlightyolanda.github.io/Task/zxyTask/task9/" target="_blank" rel="external">PC端页面四</a></li>
+<li><a href="https://sunlightyolanda.github.io/Task/xzyTask/task1/" target="_blank" rel="external">九宫格</a></li>
+<li><a href="https://sunlightyolanda.github.io/Task/xzyTask/task3/" target="_blank" rel="external">移动端页面一</a></li>
+<li><a href="https://sunlightyolanda.github.io/Task/xzyTask/task4/" target="_blank" rel="external">移动端页面二</a></li>
+<li><a href="https://sunlightyolanda.github.io/Task/xzyTask/task7/task7-1" target="_blank" rel="external">PC端页面一</a></li>
+<li><a href="https://sunlightyolanda.github.io/Task/xzyTask/task7/task7-2" target="_blank" rel="external">PC端页面二</a></li>
+<li><a href="https://sunlightyolanda.github.io/Task/xzyTask/task8/" target="_blank" rel="external">PC端页面三</a></li>
+<li><a href="https://sunlightyolanda.github.io/Task/xzyTask/task9/" target="_blank" rel="external">PC端页面四</a></li>
 </ul>
 
       
