@@ -84,16 +84,26 @@
 
 
 
-<meta name="description" content="第一个填的坑是轮播图，主要是用jQuery完成三个简单的轮播图：手动点击、自动轮播、鼠标悬浮停止。基本结构：最外面一个框架，里面用无序列表来放置要展示的图片；让li水平排列，并且li宽度与框架宽度相等。超出部分隐藏，也就是只展示第一个图片，其余部分隐藏；再用一个div来放置数字，默认展示第一个图片，设置与图片对应的数字背景变色。">
+<meta name="description" content="之前写过轮播图，但是不完善。没有添加前进后退按钮，而且不能无缝轮播。所以今天添加两个轮播图：淡入淡出轮播图、无缝轮播图。  
+淡入淡出原理：淡入淡出轮播图要实现的效果是图片一张一张显示，之后消失。基本结构是将要展示的图片放到列表中，并且用absolute绝对定位将li元素叠放在框架中，并将其隐藏，通过脚本控制图片显示。同时把前进、后退按钮定位到框架左右两侧。轮播图下面的ol列表是用来设置圆点按钮，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="轮播图及其他页面练习">
-<meta property="og:url" content="http://yoursite.com/2016/11/08/轮播图及其他页面练习/index.html">
+<meta property="og:title" content="轮播图——淡入淡出">
+<meta property="og:url" content="http://yoursite.com/2016/11/18/轮播图——淡入淡出/index.html">
 <meta property="og:site_name" content="Sunlight的博客">
-<meta property="og:description" content="第一个填的坑是轮播图，主要是用jQuery完成三个简单的轮播图：手动点击、自动轮播、鼠标悬浮停止。基本结构：最外面一个框架，里面用无序列表来放置要展示的图片；让li水平排列，并且li宽度与框架宽度相等。超出部分隐藏，也就是只展示第一个图片，其余部分隐藏；再用一个div来放置数字，默认展示第一个图片，设置与图片对应的数字背景变色。">
-<meta property="og:updated_time" content="2016-11-16T01:25:42.406Z">
+<meta property="og:description" content="之前写过轮播图，但是不完善。没有添加前进后退按钮，而且不能无缝轮播。所以今天添加两个轮播图：淡入淡出轮播图、无缝轮播图。  
+淡入淡出原理：淡入淡出轮播图要实现的效果是图片一张一张显示，之后消失。基本结构是将要展示的图片放到列表中，并且用absolute绝对定位将li元素叠放在框架中，并将其隐藏，通过脚本控制图片显示。同时把前进、后退按钮定位到框架左右两侧。轮播图下面的ol列表是用来设置圆点按钮，">
+<meta property="og:image" content="http://yoursite.com/uploads/carousel/html-1.png">
+<meta property="og:image" content="http://yoursite.com/uploads/carousel/js_1.png">
+<meta property="og:image" content="http://yoursite.com/uploads/carousel/demo_1.png">
+<meta property="og:image" content="http://yoursite.com/uploads/carousel/js_2.png">
+<meta property="og:image" content="http://yoursite.com/uploads/carousel/js_3.png">
+<meta property="og:image" content="http://yoursite.com/uploads/carousel/demo_1.2.png">
+<meta property="og:updated_time" content="2016-11-18T02:16:41.064Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="轮播图及其他页面练习">
-<meta name="twitter:description" content="第一个填的坑是轮播图，主要是用jQuery完成三个简单的轮播图：手动点击、自动轮播、鼠标悬浮停止。基本结构：最外面一个框架，里面用无序列表来放置要展示的图片；让li水平排列，并且li宽度与框架宽度相等。超出部分隐藏，也就是只展示第一个图片，其余部分隐藏；再用一个div来放置数字，默认展示第一个图片，设置与图片对应的数字背景变色。">
+<meta name="twitter:title" content="轮播图——淡入淡出">
+<meta name="twitter:description" content="之前写过轮播图，但是不完善。没有添加前进后退按钮，而且不能无缝轮播。所以今天添加两个轮播图：淡入淡出轮播图、无缝轮播图。  
+淡入淡出原理：淡入淡出轮播图要实现的效果是图片一张一张显示，之后消失。基本结构是将要展示的图片放到列表中，并且用absolute绝对定位将li元素叠放在框架中，并将其隐藏，通过脚本控制图片显示。同时把前进、后退按钮定位到框架左右两侧。轮播图下面的ol列表是用来设置圆点按钮，">
+<meta name="twitter:image" content="http://yoursite.com/uploads/carousel/html-1.png">
 
 
 
@@ -114,10 +124,10 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/11/08/轮播图及其他页面练习/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/11/18/轮播图——淡入淡出/"/>
 
 
-  <title> 轮播图及其他页面练习 | Sunlight的博客 </title>
+  <title> 轮播图——淡入淡出 | Sunlight的博客 </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -227,7 +237,7 @@
             
             
               
-                轮播图及其他页面练习
+                轮播图——淡入淡出
               
             
           </h1>
@@ -239,8 +249,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-08T19:43:13+08:00" content="2016-11-08">
-              2016-11-08
+            <time itemprop="dateCreated" datetime="2016-11-18T08:57:45+08:00" content="2016-11-18">
+              2016-11-18
             </time>
           </span>
 
@@ -267,23 +277,14 @@
       
 
       
-        <p>第一个填的坑是轮播图，主要是用jQuery完成三个简单的轮播图：<strong>手动点击</strong>、<strong>自动轮播</strong>、<strong>鼠标悬浮停止</strong>。<br><strong>基本结构：</strong>最外面一个框架，里面用无序列表来放置要展示的图片；让li水平排列，并且li宽度与框架宽度相等。超出部分隐藏，也就是只展示第一个图片，其余部分隐藏；再用一个div来放置数字，默认展示第一个图片，设置与图片对应的数字背景变色。<br><a id="more"></a><br><strong>轮播效果：</strong>将列表相对定位，为其添加动画效果，根据数字索引号，计算移动距离，将其向左移动。实现轮播图效果。</p>
-<h4 id="手动点击轮播图"><a href="#手动点击轮播图" class="headerlink" title="手动点击轮播图"></a>手动点击轮播图</h4><p><strong>绑定事件：</strong>为数字绑定click事件，点击数字时，为该数字添加变色样式，同时让其他的同类元素移除变色样式。ul根据数字索引向左移动，实现轮播。    </p>
-<p><strong>效果展示：</strong><a href="https://sunlightyolanda.github.io/Task/%E8%BD%AE%E6%92%AD%E5%9B%BE/%E6%89%8B%E5%8A%A8%E7%82%B9%E5%87%BB/demo.html" target="_blank" rel="external">手动轮播图</a></p>
-<h4 id="自动轮播图"><a href="#自动轮播图" class="headerlink" title="自动轮播图"></a>自动轮播图</h4><p><strong>绑定事件：</strong>自动轮播图在手动轮播图的基础上修改而来。在保留手动点击效果的同时添加自动轮播。需要添加模拟点击事件:trigger()。而要保证不停轮播，需要用到setInterval() ，设定每2秒点击一次。<br>但是这样还有问题，要轮播的图片是一定的，而自动轮播每模拟点击一次，图片索引就要加1，到了最后一个的时候再加1，没有与之对应的图片。所以需要对索引号进行判断。当索引号大于数字-1的时候，图片索引号归零。**同时为了效果更好，设置ul马上回到初始位置，否则图片和数字会从最后一个倒回第一个。而设置ul归零，可以直接从第一个从新开始。    </p>
-<p><strong>效果展示：</strong><a href="https://sunlightyolanda.github.io/Task/%E8%BD%AE%E6%92%AD%E5%9B%BE/%E8%87%AA%E5%8A%A8%E8%BD%AE%E6%92%AD/demo.html" target="_blank" rel="external">自动轮播图</a></p>
-<h4 id="鼠标悬浮停止"><a href="#鼠标悬浮停止" class="headerlink" title="鼠标悬浮停止"></a>鼠标悬浮停止</h4><p><strong>绑定事件：</strong>鼠标悬浮停止只需要在上一个的基础上添加一个hover()即可，同时为了减少重复代码，可以将自动轮播代码写一个函数封装，只需要在hover()里调用就行。这里有一个坑，让我一不小心就掉进去了！！！<br>上面说将自动轮播写成一个函数，自动轮播需要调用，用的是autoPlay()，此时是加括号的！而hover()里面也要用到该函数，写的却是autoPlay!!!看了下面这个文章才搞明白。</p>
-<p><strong>效果展示：</strong><a href="https://sunlightyolanda.github.io/Task/%E8%BD%AE%E6%92%AD%E5%9B%BE/%E6%82%AC%E6%B5%AE%E5%81%9C%E6%AD%A2/demo.html" target="_blank" rel="external">悬浮停止</a></p>
-<p><strong>js函数名加不加括号的区别：</strong><br><a href="http://www.dzwebs.net/4876.html" target="_blank" rel="external">看这里</a></p>
-<h4 id="其他练习页面"><a href="#其他练习页面" class="headerlink" title="其他练习页面"></a>其他练习页面</h4><ul>
-<li><a href="https://sunlightyolanda.github.io/Task/xzyTask/task1/" target="_blank" rel="external">九宫格</a></li>
-<li><a href="https://sunlightyolanda.github.io/Task/xzyTask/task3/" target="_blank" rel="external">移动端页面一</a></li>
-<li><a href="https://sunlightyolanda.github.io/Task/xzyTask/task4/" target="_blank" rel="external">移动端页面二</a></li>
-<li><a href="https://sunlightyolanda.github.io/Task/xzyTask/task7/task7-1" target="_blank" rel="external">PC端页面一</a></li>
-<li><a href="https://sunlightyolanda.github.io/Task/xzyTask/task7/task7-2" target="_blank" rel="external">PC端页面二</a></li>
-<li><a href="https://sunlightyolanda.github.io/Task/xzyTask/task8/" target="_blank" rel="external">PC端页面三</a></li>
-<li><a href="https://sunlightyolanda.github.io/Task/xzyTask/task9/" target="_blank" rel="external">PC端页面四</a></li>
-</ul>
+        <p>之前写过轮播图，但是不完善。没有添加前进后退按钮，而且不能无缝轮播。所以今天添加两个轮播图：淡入淡出轮播图、无缝轮播图。  </p>
+<h3 id="淡入淡出"><a href="#淡入淡出" class="headerlink" title="淡入淡出"></a>淡入淡出</h3><p><strong>原理：</strong>淡入淡出轮播图要实现的效果是图片一张一张显示，之后消失。基本结构是将要展示的图片放到列表中，并且用absolute绝对定位将li元素叠放在框架中，并将其隐藏，通过脚本控制图片显示。同时把前进、后退按钮定位到框架左右两侧。轮播图下面的ol列表是用来设置圆点按钮，通过脚本添加，所以此处为空。<br><img src="/uploads/carousel/html-1.png" alt=""><br><strong>jQuery脚本：</strong>轮播效果用jQuery来实现。<br><a id="more"></a><br><strong>1.写入底部圆点按钮:</strong><br>之前的ol列表为空，需要在这里动态添加按钮，这里用到了append()方法。  </p>
+<p><img src="/uploads/carousel/js_1.png" alt=""><br><strong>2. 显示首张图片:</strong><br>由于所有的图片都重叠隐藏，所以在页面加载之后，需要通过脚本将首张图片设置为block，使其显示。同时向底部按钮的第一个添加样式。  </p>
+<p><img src="/uploads/carousel/demo_1.png" alt=""><br><strong>3.为数字按钮绑定点击事件:</strong><br>首先实现点击数字按钮实现轮播。数字按钮与图片一一对应而且他们都在列表中，所以他们的索引值相互关联。<strong>通过点击按钮，获取当前按钮索引值（设置一个全局变量来记录索引值，这里用 i 来表示： var i = 0； 初始状态i为0，表示第一张图片或者第一个按钮），同时这个数值也是图片列表中对应图片的索引值，所以可以通过数字按钮控制图片。</strong>将当前数字按钮变为激活状态，同时用siblings()方法找到其他数字按钮，使其恢复默认状态；将当前索引对应的图片用fadeIn()方法淡入，同时找到其他元素，让他们淡出。就可以实现手动轮播。需要注意的是在淡入淡出时最好加入stop()方法，停止之前的运动，防止发生错误。  </p>
+<p><img src="/uploads/carousel/js_2.png" alt=""><br><strong>4.实现自动轮播:</strong><br>自动轮播功能之前说过，这里不详细说了，重点是setInterval()计时器的使用和索引的判断。当索引值大于图片数-1时使其归零，从头开始。<br><strong>5.添加前进后退按钮:</strong><br>这两个按钮默认隐藏，当鼠标滑入框架时显示，可以通过css控制，也可以用脚本控制。这里用的是css控制。<strong>重点是为按钮绑定点击事件，以防万一这里首先添加了清除定时器，防止出错。前进按钮对应右按钮，点击该按钮，索引号增加，判断是否超出范围，如果没有超出，执行淡入淡出动画，如果超出，先将索引归零，从头开始；后退按钮同理。</strong>  </p>
+<p><img src="/uploads/carousel/js_3.png" alt=""><br><strong>6.鼠标悬浮停止:</strong><br>悬浮停止的部分和之前的一样。</p>
+<p><strong>7.效果展示:</strong><a href="https://sunlightyolanda.github.io/Task/%E8%BD%AE%E6%92%AD%E5%9B%BE/%E6%B7%A1%E5%85%A5%E6%B7%A1%E5%87%BA/demo.html" target="_blank" rel="external">淡入淡出轮播图</a></p>
+<p><img src="/uploads/carousel/demo_1.2.png" alt=""></p>
 
       
     </div>
@@ -309,16 +310,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/11/04/自学笔记（二）/" rel="next" title="自学笔记（二）">
-                <i class="fa fa-chevron-left"></i> 自学笔记（二）
+              <a href="/2016/11/09/jQuery展示/" rel="next" title="jQuery展示">
+                <i class="fa fa-chevron-left"></i> jQuery展示
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/11/09/jQuery展示/" rel="prev" title="jQuery展示">
-                jQuery展示 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/11/18/轮播图——无缝轮播/" rel="prev" title="轮播图——无缝轮播">
+                轮播图——无缝轮播 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -430,7 +431,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#手动点击轮播图"><span class="nav-number">1.</span> <span class="nav-text">手动点击轮播图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自动轮播图"><span class="nav-number">2.</span> <span class="nav-text">自动轮播图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#鼠标悬浮停止"><span class="nav-number">3.</span> <span class="nav-text">鼠标悬浮停止</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他练习页面"><span class="nav-number">4.</span> <span class="nav-text">其他练习页面</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#淡入淡出"><span class="nav-number">1.</span> <span class="nav-text">淡入淡出</span></a></li></ol></div>
             
           </div>
         </section>
