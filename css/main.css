@@ -1564,7 +1564,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff4bff;
+  background: #1b78a8;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2642,9 +2642,8 @@ body {
 }
 .links-of-author-item {
   float: left;
-  margin: 5px 25%;
+  margin: 5px 0 0;
   width: 50%;
-  text-align:center; 
 }
 .links-of-author-item a {
   box-sizing: border-box;
