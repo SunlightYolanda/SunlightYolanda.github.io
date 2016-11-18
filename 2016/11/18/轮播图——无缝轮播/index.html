@@ -84,16 +84,26 @@
 
 
 
-<meta name="description" content="年少无为，不知老之将至">
+<meta name="description" content="无缝轮播图是在之前的有缝轮播图基础上修改而来，区别在于当图片到达最后一张时，不是直接回到第一张，而是复制第一张，放到最后。这样从理论上的最后一张继续轮播，显示的是实际上的最后一张（也就是和第一张重复的那一张），之后马上将图片复位，显示第一张，再轮播显示的就是第二张。这样利用css属性可以马上实现的原理，从视觉上可以实现无缝轮播，一直循环。（大体框架和淡入淡出效果一样，只需要对部分内容进行修改即可。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="轮播图——无缝轮播">
 <meta property="og:url" content="http://yoursite.com/2016/11/18/轮播图——无缝轮播/index.html">
 <meta property="og:site_name" content="Sunlight的博客">
-<meta property="og:description" content="年少无为，不知老之将至">
-<meta property="og:updated_time" content="2016-11-18T02:18:47.745Z">
+<meta property="og:description" content="无缝轮播图是在之前的有缝轮播图基础上修改而来，区别在于当图片到达最后一张时，不是直接回到第一张，而是复制第一张，放到最后。这样从理论上的最后一张继续轮播，显示的是实际上的最后一张（也就是和第一张重复的那一张），之后马上将图片复位，显示第一张，再轮播显示的就是第二张。这样利用css属性可以马上实现的原理，从视觉上可以实现无缝轮播，一直循环。（大体框架和淡入淡出效果一样，只需要对部分内容进行修改即可。">
+<meta property="og:image" content="http://yoursite.com/uploads/carousel-2/demo_1.png">
+<meta property="og:image" content="http://yoursite.com/uploads/carousel-2/demo_2.png">
+<meta property="og:image" content="http://yoursite.com/uploads/carousel-2/demo_3.png">
+<meta property="og:image" content="http://yoursite.com/uploads/carousel-2/js_1.png">
+<meta property="og:image" content="http://yoursite.com/uploads/carousel-2/demo_4.png">
+<meta property="og:image" content="http://yoursite.com/uploads/carousel-2/demo_5.png">
+<meta property="og:image" content="http://yoursite.com/uploads/carousel-2/demo_6.png">
+<meta property="og:image" content="http://yoursite.com/uploads/carousel-2/js_2.png">
+<meta property="og:image" content="http://yoursite.com/uploads/carousel-2/demo_7.png">
+<meta property="og:updated_time" content="2016-11-18T03:51:27.025Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="轮播图——无缝轮播">
-<meta name="twitter:description" content="年少无为，不知老之将至">
+<meta name="twitter:description" content="无缝轮播图是在之前的有缝轮播图基础上修改而来，区别在于当图片到达最后一张时，不是直接回到第一张，而是复制第一张，放到最后。这样从理论上的最后一张继续轮播，显示的是实际上的最后一张（也就是和第一张重复的那一张），之后马上将图片复位，显示第一张，再轮播显示的就是第二张。这样利用css属性可以马上实现的原理，从视觉上可以实现无缝轮播，一直循环。（大体框架和淡入淡出效果一样，只需要对部分内容进行修改即可。">
+<meta name="twitter:image" content="http://yoursite.com/uploads/carousel-2/demo_1.png">
 
 
 
@@ -267,7 +277,9 @@
       
 
       
-        
+        <p>无缝轮播图是在之前的有缝轮播图基础上修改而来，区别在于当图片到达最后一张时，不是直接回到第一张，而是复制第一张，放到最后。这样从理论上的最后一张继续轮播，显示的是实际上的最后一张（也就是和第一张重复的那一张），之后马上将图片复位，显示第一张，再轮播显示的就是第二张。这样利用css属性可以马上实现的原理，从视觉上可以实现无缝轮播，一直循环。（大体框架和淡入淡出效果一样，只需要对部分内容进行修改即可。）</p>
+<h3 id="无缝轮播"><a href="#无缝轮播" class="headerlink" title="无缝轮播"></a>无缝轮播</h3><p><strong>1. 克隆第一张图片：</strong><br>首先用clone()方法克隆第一张，然后用append()方法将它添加到图片列表最后。这里需要注意的是：添加图片是在脚本里面添加，而不是html文本里。添加之后情况如下：<br>第一张图片：<br><img src="/uploads/carousel-2/demo_1.png" alt="&quot;第一张图片&quot;"><br><a id="more"></a><br>第四张（理论上的最后一张）和最后一张（和第一张相同，也就是克隆的那一张）:<br><img src="/uploads/carousel-2/demo_2.png" alt=""><br><strong>2. 添加数字按钮：</strong><br>和淡入淡出方法一样，不同之处在于实际上只要显示不同的4张图片，所以只需要添加4个按钮，需要将参数修改一下。<br><strong>3. 数字按钮绑定点击事件：</strong><br>和淡入淡出的区别在于点击数字按钮之后不是对与之对应的图片进行操作，而是对图片列表进行操作。根据索引，将ul列表向左移动，用animate()动画来实现。例如，点击第二个按钮，对应的索引是1，要显示第二张图片只需要经列表整体向左移动1个图片的宽度即可，通过索引号和图片宽度计算。<br><img src="/uploads/carousel-2/demo_3.png" alt=""><br><img src="/uploads/carousel-2/js_1.png" alt=""><br><strong>4.前进后退按钮：</strong><br><strong>这里是实现无缝轮播的重点!</strong><br>前进按钮也就是右按钮，点击它索引号一直增加，当索引号为3（也就是数字按钮为4）的时候，图片位置如图所示：<br><img src="/uploads/carousel-2/demo_4.png" alt=""><br>图片显示第四张，再点击一次，索引号为4，ul继续向左运动，此刻实际状态是从第四张轮播到了第五张。同时数字按钮也需要改变，由于数字按钮只有四个，在图片轮播的同时要将显示的数字按钮从4改为1。<img src="/uploads/carousel-2/demo_5.png" alt="">运动完成之后，立刻通过控制css样式，让列表回归初始状态，也就是将正在显示的图片从实际上的第五张瞬间变成第一张，由于这两张图片一样，而且css控制样式改变肉眼察觉不到，视觉效果就是从最后一张轮播到了第一张。<br><img src="/uploads/carousel-2/demo_6.png" alt=""><br>继续点击右按钮，要达到的效果是从第一章轮播到第二章，所以在上一步轮播进行完之后需要将索引号设置为1，这样再点击的时候就是从第一张向第二张轮播。至此向右无缝轮播完成。向左无缝轮播同理。<br><img src="/uploads/carousel-2/js_2.png" alt=""><br><strong>5.自动轮播和鼠标悬浮：</strong><br>这部分和淡入淡出一样。<br><strong>6.效果展示：</strong> <a href="https://sunlightyolanda.github.io/Task/%E8%BD%AE%E6%92%AD%E5%9B%BE/%E6%97%A0%E7%BC%9D%E8%BD%AE%E6%92%AD/demo.html" target="_blank" rel="external">无缝轮播</a><br><img src="/uploads/carousel-2/demo_7.png" alt=""></p>
+
       
     </div>
 
@@ -409,7 +421,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#无缝轮播"><span class="nav-number">1.</span> <span class="nav-text">无缝轮播</span></a></li></ol></div>
             
           </div>
         </section>
