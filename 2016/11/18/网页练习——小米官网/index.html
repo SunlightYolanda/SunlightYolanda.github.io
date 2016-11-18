@@ -1,0 +1,582 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="小米官网首页比诚衣更复杂一些，涉及的内容更多。
+网页结构由于页面各个部分的背景色有所区别，为了方便设置将页面分为了四个部分：头部(header)、主要内容-上半部分(main-top)、主要内容-下半部分(main-bottom)、底部(footer)。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网页练习——小米官网">
+<meta property="og:url" content="http://yoursite.com/2016/11/18/网页练习——小米官网/index.html">
+<meta property="og:site_name" content="Sunlight的博客">
+<meta property="og:description" content="小米官网首页比诚衣更复杂一些，涉及的内容更多。
+网页结构由于页面各个部分的背景色有所区别，为了方便设置将页面分为了四个部分：头部(header)、主要内容-上半部分(main-top)、主要内容-下半部分(main-bottom)、底部(footer)。">
+<meta property="og:image" content="http://yoursite.com/uploads/mi/html-1.png">
+<meta property="og:image" content="http://yoursite.com/uploads/mi/demo-1.png">
+<meta property="og:image" content="http://yoursite.com/uploads/mi/js-1.png">
+<meta property="og:image" content="http://yoursite.com/uploads/mi/demo-2.png">
+<meta property="og:image" content="http://yoursite.com/uploads/mi/demo-3.png">
+<meta property="og:image" content="http://yoursite.com/uploads/mi/js-2.png">
+<meta property="og:image" content="http://yoursite.com/uploads/mi/demo-4.png">
+<meta property="og:image" content="http://yoursite.com/uploads/mi/demo-5.png">
+<meta property="og:image" content="http://yoursite.com/uploads/mi/js-3.png">
+<meta property="og:image" content="http://yoursite.com/uploads/mi/demo-6.png">
+<meta property="og:image" content="http://yoursite.com/uploads/mi/demo-7.png">
+<meta property="og:image" content="http://yoursite.com/uploads/mi/js-4.png">
+<meta property="og:updated_time" content="2016-11-18T12:28:23.922Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="网页练习——小米官网">
+<meta name="twitter:description" content="小米官网首页比诚衣更复杂一些，涉及的内容更多。
+网页结构由于页面各个部分的背景色有所区别，为了方便设置将页面分为了四个部分：头部(header)、主要内容-上半部分(main-top)、主要内容-下半部分(main-bottom)、底部(footer)。">
+<meta name="twitter:image" content="http://yoursite.com/uploads/mi/html-1.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/11/18/网页练习——小米官网/"/>
+
+
+  <title> 网页练习——小米官网 | Sunlight的博客 </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Sunlight的博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">我要变成猿！</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                网页练习——小米官网
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-18T18:20:50+08:00" content="2016-11-18">
+              2016-11-18
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>小米官网首页比诚衣更复杂一些，涉及的内容更多。</p>
+<h2 id="网页结构"><a href="#网页结构" class="headerlink" title="网页结构"></a>网页结构</h2><p>由于页面各个部分的背景色有所区别，为了方便设置将页面分为了四个部分：头部(header)、主要内容-上半部分(main-top)、主要内容-下半部分(main-bottom)、底部(footer)。<br><img src="/uploads/mi/html-1.png" alt=""><br><a id="more"></a><br><strong>1. 头部：</strong>页面顶部的超链接、登录注册以及购物车。背景为黑色。<br><strong>2. 上半部分：</strong>由四个小的div组成：水平导航+搜索框、轮播图+左侧导航菜单、轮播图底部图片展示、小米明星单品。背景为白色。<br><strong>3. 下半部分：</strong>智能硬件、其他内容两部分。(这一部分与官网有所差别，重复的内容没有编写，进行了简化，主要是为了练习不同的布局和知识点)。背景为灰色。<br><strong>4. 底部：</strong>售后服务、版权等信息。背景白色。</p>
+<h2 id="页面编写"><a href="#页面编写" class="headerlink" title="页面编写"></a>页面编写</h2><h3 id="头部"><a href="#头部" class="headerlink" title="头部"></a>头部</h3><p>头部的超链接导航和登录注册部分用两个无序列表完成。其中购物车添加一个下滑菜单，同诚衣首页的购物车类似。</p>
+<h3 id="上半部分"><a href="#上半部分" class="headerlink" title="上半部分"></a>上半部分</h3><h4 id="logo和搜索"><a href="#logo和搜索" class="headerlink" title="logo和搜索"></a>logo和搜索</h4><p>logo和搜索比较简单，分布到两侧，按照诚衣首页的方法布局就可以完成。</p>
+<h4 id="水平导航"><a href="#水平导航" class="headerlink" title="水平导航"></a>水平导航</h4><p>水平导航也是用无序列表来写。<strong>但是每一个导航元素还有一个下滑菜单进行展示。</strong>所以要在每一个li元素内部嵌套一个列表，用来放置展示内容。<br><img src="/uploads/mi/demo-1.png" alt=""><br>将所有的二级列表隐藏，通过脚本控制下拉、收起等动作。<br><img src="/uploads/mi/js-1.png" alt=""></p>
+<h4 id="左侧导航菜单"><a href="#左侧导航菜单" class="headerlink" title="左侧导航菜单"></a>左侧导航菜单</h4><p>左侧垂直导航菜单用列表写，每一个li元素都有一个二级菜单。默认状态时隐藏，鼠标滑入显示，移出隐藏。原理和购物车一样。<strong>需要注意的是它和轮播图是在一个框架内的，也就是相互重叠，导航菜单的背景色随轮播图变化，所以要将一级菜单的背景色设为透明。</strong><br><img src="/uploads/mi/demo-2.png" alt=""></p>
+<h4 id="大轮播图"><a href="#大轮播图" class="headerlink" title="大轮播图"></a>大轮播图</h4><p>大轮播图直接套用写好的淡入淡出轮播图即可。需要注意的是<strong>导航菜单、轮播图、二级菜单、水平导航菜单的二级菜单这几个部分都有重叠的部分，所以需要根据展示效果灵活设置z-index的值，是他们不会相互影响。</strong></p>
+<h4 id="轮播图底部图片链接"><a href="#轮播图底部图片链接" class="headerlink" title="轮播图底部图片链接"></a>轮播图底部图片链接</h4><p>根据尺寸做好布局就可以。最左侧的div里嵌套一个列表就可以完成，小图标是从<a href="http://www.easyicon.net/" target="_blank" rel="external">easyicon</a>找的。<br><img src="/uploads/mi/demo-3.png" alt=""></p>
+<h4 id="明星单品"><a href="#明星单品" class="headerlink" title="明星单品"></a>明星单品</h4><p>此处是一个只有两页的左右轮播图。在每一个li里面嵌套5个dl自定义列表完成。不需要数字按钮，只需要前进后退按钮。<strong>需要注意的问题是它是自动轮播的，间隔相同的时间左右交替显示。</strong>开始的时候只知道要用到计时器，但是做不到间隔相同时间自动轮播。之后才想到要用到setTimeout()和setInterval()两种计时器。就可以实现功能。<br><img src="/uploads/mi/js-2.png" alt=""></p>
+<h3 id="下半部分"><a href="#下半部分" class="headerlink" title="下半部分"></a>下半部分</h3><h4 id="智能硬件"><a href="#智能硬件" class="headerlink" title="智能硬件"></a>智能硬件</h4><p>智能硬件部分增加了新的内容。鼠标滑入的时候有一个悬浮效果。<br>默认状态<img src="/uploads/mi/demo-4.png" alt=""><br>悬浮状态<img src="/uploads/mi/demo-5.png" alt=""><br>这里使用脚本来模拟：鼠标滑入div后，首先添加阴影，之后让其向上移动一段距离，评价卡片滑出。这样就可以模拟出悬浮效果。鼠标移出后，恢复原样。<br><img src="/uploads/mi/js-3.png" alt=""><br><strong>这里需要注意的是：最开始的时候卡片外层没有添加列表，造成的结果就是鼠标滑入后所有的卡片都运动。之后依靠列表li的索引才能精确定位。</strong></p>
+<h4 id="其他内容"><a href="#其他内容" class="headerlink" title="其他内容"></a>其他内容</h4><p>最麻烦的是这一部分内容。如图：<br><img src="/uploads/mi/demo-6.png" alt=""><br><img src="/uploads/mi/demo-7.png" alt=""><br><strong>结构分析：</strong><br>最外层我使用了ul列表来放置四个项目;每个项目中又有一个小的轮播图，也使用了一个ul列表；而且每个轮播图还有圆圈按钮，用了一个ol列表。<br>三个列表相互嵌套，使得结构比较麻烦，不容易定位到要操作的元素。造成的结果就是最开始轮播只要操作一个小轮播图，其他的轮播图要么不动，要么一起运动。查阅jQuery手册后发现可以通过each()先遍历最外层li，之后再操作轮播图比较好实现。<br><img src="/uploads/mi/js-4.png" alt=""><br>这样只需要编写小轮播图的代码就可以完成功能。不会互相影响。</p>
+<h3 id="底部"><a href="#底部" class="headerlink" title="底部"></a>底部</h3><p>底部和诚衣相差不大，也是通过dl自定义列表完成，比较简单。</p>
+<h3 id="网页及代码"><a href="#网页及代码" class="headerlink" title="网页及代码"></a>网页及代码</h3><p>网页地址：<a href="https://sunlightyolanda.github.io/Task/MI/" target="_blank" rel="external">小米官网首页</a><br>代码地址：<a href="https://github.com/SunlightYolanda/Task/tree/gh-pages/MI" target="_blank" rel="external">GitHub</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/11/18/网页练习——诚衣/" rel="next" title="网页练习——诚衣">
+                <i class="fa fa-chevron-left"></i> 网页练习——诚衣
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/1.jpg"
+               alt="Sunlight" />
+          <p class="site-author-name" itemprop="name">Sunlight</p>
+          <p class="site-description motion-element" itemprop="description">年少无为，不知老之将至</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/SunlightYolanda" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#网页结构"><span class="nav-number">1.</span> <span class="nav-text">网页结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#页面编写"><span class="nav-number">2.</span> <span class="nav-text">页面编写</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#头部"><span class="nav-number">2.1.</span> <span class="nav-text">头部</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上半部分"><span class="nav-number">2.2.</span> <span class="nav-text">上半部分</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#logo和搜索"><span class="nav-number">2.2.1.</span> <span class="nav-text">logo和搜索</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#水平导航"><span class="nav-number">2.2.2.</span> <span class="nav-text">水平导航</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#左侧导航菜单"><span class="nav-number">2.2.3.</span> <span class="nav-text">左侧导航菜单</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#大轮播图"><span class="nav-number">2.2.4.</span> <span class="nav-text">大轮播图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#轮播图底部图片链接"><span class="nav-number">2.2.5.</span> <span class="nav-text">轮播图底部图片链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#明星单品"><span class="nav-number">2.2.6.</span> <span class="nav-text">明星单品</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下半部分"><span class="nav-number">2.3.</span> <span class="nav-text">下半部分</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#智能硬件"><span class="nav-number">2.3.1.</span> <span class="nav-text">智能硬件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他内容"><span class="nav-number">2.3.2.</span> <span class="nav-text">其他内容</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#底部"><span class="nav-number">2.4.</span> <span class="nav-text">底部</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网页及代码"><span class="nav-number">2.5.</span> <span class="nav-text">网页及代码</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sunlight</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
