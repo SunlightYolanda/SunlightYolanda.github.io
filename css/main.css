@@ -2642,8 +2642,9 @@ body {
 }
 .links-of-author-item {
   float: left;
-  margin: 5px 0 0;
+  margin: 5px 25%;
   width: 50%;
+  text-align:center;
 }
 .links-of-author-item a {
   box-sizing: border-box;
